@@ -10,7 +10,7 @@ const Header = () =>{
                 <ul className="navbar navbar-expand-lg fixed-top">
                     <div className="container-fluid">
                         <Link to="/" className="navbar-brand">
-                            <img src={logo} width="60" alt="Página principal"></img>
+                            <img src={logo} width="40" alt="Página principal"></img>
                         </Link>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-site" aria-controls="navbar-site" aria-expanded="false" aria-label="Toggle navigation">
