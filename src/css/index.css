@@ -1,0 +1,119 @@
+.departments-carousel-section {
+  padding-left: 0;
+  padding-right: 0;
+}
+.departments-carousel-section > .row > .col-departments > .carousel {
+  width: 100%;
+  margin-top: 75px;
+}
+.departments-carousel-section > .row > .col-departments > .carousel > .carousel-inner > .carousel-item > img {
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.information-section {
+  margin-bottom: 5%;
+  background-color: transparent;
+}
+.information-section > .row > .my-home-promotional {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 700;
+  width: 70%;
+  margin: 5% 15% 0% 15%;
+  color: #202028;
+}
+.information-section > .row > .ground-article, .information-section > .row .office-article {
+  padding-left: 10%;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+.information-section > .row > .department-article, .information-section > .row .home-article {
+  padding-left: 5%;
+  padding-right: 10%;
+  padding-top: 5%;
+}
+.information-section > .row > .articles-sections-information > .content-article > .card {
+  border: 0;
+  border-radius: 15px;
+}
+.information-section > .row > .articles-sections-information > .content-article > .card > .card-body > .card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.information-section > .row > .articles-sections-information :hover {
+  background-color: transparent;
+}
+.information-section > .row > .articles-sections-information :hover img {
+  width: calc(100% + 10px);
+  transition: all 0.4s ease-out;
+}
+.information-section > .row > .articles-sections-information :hover .card-title {
+  color: #fd7e14;
+  font-size: 1rem;
+}
+
+@media (max-width: 990px) {
+  .departments-carousel-section {
+    padding-left: 0;
+    padding-right: 0;
+    position: unset;
+  }
+  .departments-carousel-section > .row > .col-departments > .carousel {
+    width: 100%;
+    margin-top: 70px;
+  }
+  .departments-carousel-section > .row > .col-departments > .carousel > .carousel-inner > .carousel-item > img {
+    max-height: 400px;
+    object-fit: fill;
+  }
+
+  .information-section {
+    margin-bottom: 5%;
+    background-color: #fffafa;
+    position: relative;
+    margin-top: 0px !important;
+  }
+  .information-section > .row > .ground-article, .information-section > .row .office-article {
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top: 5%;
+  }
+  .information-section > .row > .department-article, .information-section > .row .home-article {
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-top: 5%;
+  }
+}
+@media (max-width: 767px) {
+  .information-section {
+    margin-bottom: 5%;
+    background-color: #fffafa;
+  }
+  .information-section > .row > .ground-article, .information-section > .row .office-article {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+  }
+  .information-section > .row > .department-article, .information-section > .row .home-article {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+  }
+  .information-section > .row > .articles-sections-information :hover {
+    background-color: transparent;
+  }
+  .information-section > .row > .articles-sections-information :hover img {
+    width: 100%;
+    transition: none;
+  }
+  .information-section > .row > .articles-sections-information :hover .card-title {
+    color: unset;
+    font-size: unset;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,600 @@
+@use 'global' as *;
+
+/*CSS General*/
+
+body{
+    background-color: transparent;
+    font-family: $font-monserrat;
+    font-size: 16px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html, body {
+    padding:0;
+    margin:0;
+    height:100%;
+}
+
+.navbar{
+    font-family: $font-monserrat;
+    font-size: 1.0rem;
+    font-weight: $super-bold-700;
+    //font-stretch: semi-expanded;
+    background-color: $background-nav;
+    border: 1px solid $border-color-nav;
+
+    & > .container-fluid{
+        & > a{
+            & > img{
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+// .sticky-top {
+//     position: -webkit-sticky !important;
+//     // position: fixed;
+//     width: -webkit-fill-available;
+//     top: 0;
+//     z-index: 1020;
+// }
+
+.loading-page{
+    z-index: 1;
+    background-color: white;
+    opacity: 1.0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    & > .spinner-border {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        vertical-align: -0.125em;
+        border: 0.25em solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: .75s linear infinite spinner-border;
+        animation: .75s linear infinite spinner-border;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -20px 0 0 -20px;
+    }
+}
+
+// .container-principal{
+//     width: 95%;
+//     background-color: rgb(150, 126, 126);
+//     margin-top: 2%;
+//     opacity: 0.99;
+//     height: 100%;
+//     overflow-y: hidden;
+// }
+
+// .font-page{
+//     background: url("../images/close-up-of-woman-s-hand-giving-house-key-to-man-over-wooden-table.jpg") fixed;
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     background-size: 100% 100%;
+//     top: 0;
+//     opacity: 15%;
+// }
+
+.nav-bar-site{
+    margin-right: 0px !important;
+    line-height: 2.5;
+    margin-bottom: 0 !important;
+
+    & > .nav-item{
+
+        & > .nav-link{
+            display: block;
+            padding: 0.2rem 1rem;
+            color: chocolate;
+            text-decoration: none;
+            padding-left: 15px;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 1s ease-in-out;
+            letter-spacing: 0.15em;
+            font-size: 0.8em;
+        }
+
+        & > .nav-link:hover {
+            color: $orange !important;
+            background-color: $coffee-with-opacity;
+            border-bottom: 2px solid $white-smoke;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 1s ease-in-out;
+        }
+    }
+}
+
+.footer-page{
+
+    background-color: $coffee-without-opacity;
+    color: $white-smoke;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    & > footer {
+
+        & > .footer-information-page{
+
+            & > .col-company-section{
+
+                padding: 10px 50px;
+                font-family: $font-roboto;
+
+                & > .company-section{
+
+                    & > .ul-company-section{
+
+                        & > .li-company-section-header{
+                            list-style: none;
+                            font-weight: $super-bold-700;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 1.0rem;
+                        }
+
+                        & > .li-company-section-items{
+                            list-style: none;
+                            font-weight: $super-bold-200;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 0.9rem;
+                            margin-left: 0;
+
+
+                        }
+
+                        & > .li-company-section-items:hover{
+                            color: $orange;
+                            font-weight: $super-bold-700;
+                        }
+
+
+                    }
+                }
+            }
+
+            & > .col-contact-section{
+                padding: 10px 50px;
+                font-family: $font-roboto;
+
+                & > .contact-section{
+
+                    & > .ul-contact-section{
+                        padding-left: 35%;
+
+                        & > .li-contact-section-header{
+                            list-style: none;
+                            font-weight: $super-bold-700;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 1.0rem;
+                            margin-left: 0;
+                        }
+
+                        & > .li-contact-section-items{
+                            list-style: none;
+                            font-weight: $super-bold-200;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 0.9rem;
+                            margin-left: 0;
+
+                            & > .whatsapp-icon-footer{
+                                margin-right: 10px;
+                            }
+                        }
+
+                        & > .li-contact-section-items:hover{
+                            color: $orange;
+                            font-weight: $super-bold-700;
+                        }
+                    }
+                }
+
+                & > .social-section{
+
+                    & > .ul-social-section{
+                        padding-left: 35%;
+
+                        & > .li-social-section-header{
+                            list-style: none;
+                            font-weight: $super-bold-700;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 1.0rem;
+                        }
+
+                        & > .li-social-section-items{
+                            list-style: none;
+                            display: inline-block;
+                            margin-bottom: 30px;
+                            margin-top: 0;
+                            margin-left: 0;
+                        }
+
+                        & > .li-social-section-items :hover{
+                            opacity: 0.5;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        & > .footer-copyright{
+            & > .col-copyright{
+                & > .copyright-section{
+                    & > .p-copyright{
+                        margin: 20px 0;
+                        font-weight: $super-bold-500;
+                        font-size: 0.9rem;
+                        vertical-align: middle;
+                        font-family: $font-roboto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*CSS General (Max: 861px - Min: 576px)*/
+@media (max-width: 861px) and (min-width: 576px){
+    .footer-page{
+        background-color: $coffee-without-opacity;
+        color: $white-smoke;
+        position: absolute;
+        left: 0;
+        right: 0;
+        transition: right 0.5s;
+
+        & > footer {
+
+            & > .footer-information-page{
+
+                & > .col-company-section{
+
+                    padding: 0;
+                    font-family: $font-roboto;
+                    margin: 0;
+
+                    & > .company-section{
+
+                        padding: 0;
+
+                        & > .ul-company-section{
+
+                            padding: 0;
+                            text-align: center;
+
+                            & > .li-company-section-header{
+                                list-style: none;
+                                font-weight: $super-bold-700;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                            }
+
+                            & > .li-company-section-items{
+                                list-style: none;
+                                font-weight: $super-bold-200;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.8rem;
+                                margin-left: 0;
+
+                            }
+                        }
+
+
+                    }
+
+
+                }
+
+                & > .col-contact-section{
+
+                    padding: 0;
+                    font-family: $font-roboto;
+                    margin: 0;
+
+                    & > .contact-section{
+
+                        padding: 0;
+
+                        & > .ul-contact-section{
+
+                            padding: 0;
+                            text-align: center;
+
+                            & > .li-contact-section-header{
+                                list-style: none;
+                                font-weight: $super-bold-700;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                            }
+
+                            & > .li-contact-section-items{
+                                list-style: none;
+                                font-weight: $super-bold-200;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.8rem;
+                                margin-left: 0;
+                            }
+                        }
+
+
+                    }
+
+                    & > .social-section{
+                        margin: 40px 0 0 0;
+
+                        & > .ul-social-section{
+
+                            text-align: center;
+                            padding: 0;
+
+                            & > .li-social-section-header{
+                                list-style: none;
+                                font-weight: $super-bold-700;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                            }
+
+                            & > .li-social-section-items{
+                                list-style: none;
+                                display: inline-block;
+                                margin-bottom: 30px;
+                                margin-top: 0;
+                                margin-left: 0;
+                                margin: 10px;
+                            }
+
+                            & > .li-social-section-items :hover{
+                                opacity: 0.5;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            & > .footer-copyright{
+                & > .col-copyright{
+                    & > .copyright-section{
+                        & > .p-copyright{
+                            margin: 20px 0;
+                            font-weight: $super-bold-500;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+    }
+}
+
+/*CSS General (Max: 900px) -- Se aplica únicamente para el menu principal*/
+@media (max-width: 990px){
+
+
+    .navbar{
+        font-family: $font-sans;
+        font-size: 0.9rem;
+        font-weight: $super-bold-500;
+        font-stretch: semi-expanded;
+        background-color: $coffee-without-opacity;
+        // margin-top: -50px;
+
+        & > .container-fluid{
+            & > a{
+                & > img{
+                    opacity: 1;
+                }
+            }
+        }
+
+        & > .container-fluid{
+
+            & > .navbar-toggler{
+                border: none;
+            }
+
+            & >.navbar-toggler:focus {
+                text-decoration: none;
+                outline: 0;
+                background-color: $coffee-with-opacity;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+                border:0;
+                color:$transparent;
+            }
+
+        }
+    }
+
+    .nav-bar-site{
+        margin-right: 0px !important;
+        line-height: 1.5;
+        margin-bottom: 0 !important;
+
+
+        & > .nav-item{
+
+            width: 50%;
+            margin: 0 25%;
+
+            & > .nav-link{
+                display: block;
+                padding: 0.5rem 1rem;
+                color: #f0f0f0;
+                text-decoration: none;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+                font-variant: small-caps;
+                letter-spacing: 0.1em;
+                font-size: 0.9em;
+                text-align: center;
+
+            }
+
+            & > .nav-link:hover {
+                color: #fd7e14 !important;
+                background-color: rgba(117, 121, 120, 0.4);
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+            }
+
+        }
+
+    }
+}
+
+/*CSS General (Min: 575px)*/
+@media (max-width: 575px) {
+
+    .footer-page{
+        background-color: $coffee-without-opacity;
+        color: $white-smoke;
+        position: absolute;
+        left: 0;
+        right: 0;
+        transition: right 0.5s;
+
+        & > footer {
+
+            & > .footer-information-page{
+
+                & > .col-company-section{
+
+                    padding: 0;
+                    font-family: $font-roboto;
+                    margin: 0;
+
+                    & > .company-section{
+
+                        padding: 0;
+
+                        & > .ul-company-section{
+
+                            padding: 0;
+                            text-align: center;
+
+                            & > .li-company-section-header{
+                                list-style: none;
+                                font-weight: $super-bold-700;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                            }
+
+                            & > .li-company-section-items{
+                                list-style: none;
+                                font-weight: $super-bold-200;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.8rem;
+                                margin-left: 0;
+
+                            }
+                        }
+                    }
+                }
+
+                & > .col-contact-section{
+
+                    padding: 0;
+                    font-family: $font-roboto;
+                    margin: 0;
+
+                    & > .contact-section{
+
+                        padding: 0;
+
+                        & > .ul-contact-section{
+
+                            padding: 0;
+                            text-align: center;
+
+                            & > .li-contact-section-header{
+                                list-style: none;
+                                font-weight: $super-bold-700;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                            }
+
+                            & > .li-contact-section-items{
+                                list-style: none;
+                                font-weight: $super-bold-200;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.8rem;
+                                margin-left: 0;
+                            }
+                        }
+
+
+                    }
+
+                    & > .social-section{
+                        margin: 40px 0 0 0;
+
+                        & > .ul-social-section{
+
+                            text-align: center;
+                            padding: 0;
+
+                            & > .li-social-section-header{
+                                list-style: none;
+                                font-weight: $super-bold-700;
+                                margin-bottom: 20px;
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                            }
+
+                            & > .li-social-section-items{
+                                list-style: none;
+                                display: inline-block;
+                                margin-bottom: 30px;
+                                margin-top: 0;
+                                margin-left: 0;
+                                margin: 10px;
+                            }
+
+                            & > .li-social-section-items :hover{
+                                opacity: 0.5;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            & > .footer-copyright{
+                & > .col-copyright{
+                    & > .copyright-section{
+                        & > .p-copyright{
+                            margin: 20px 0;
+                            font-weight: $super-bold-500;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

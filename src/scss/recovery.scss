@@ -1,0 +1,259 @@
+@use 'global' as *;
+
+body{
+    background-color: $ghostwhite;
+    height: auto;
+}
+
+.login-section{
+    background-color: $white;
+    width: 50%;
+    position: relative;
+    margin-top: 100px;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 15px;
+    border: none;
+    -webkit-box-shadow: 1px 0px 20px rgb(0 0 0 / 5%);
+    box-shadow: 1px 0px 20px rgb(0 0 0 / 5%);
+
+    & > .img-login{
+
+        & > .article-login{
+
+            width: 100%;
+            margin-top: 5%;
+            padding-left: 25%;
+            padding-right: 25%;
+
+            & > img{
+                width: 20%;
+                margin-left: 40%;
+                margin-right: 40%;
+                padding-left: 0% 26%;
+            }
+
+        }
+    }
+
+    & > .userCredentials{
+        width: 80%;
+        margin: 5% 10%;
+
+        & > .alert-message{
+
+            font-family: $font-poppins;
+
+            & > .alert{
+                & > .close{
+                    float: right;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    line-height: 1;
+                    color: $red;
+                    background: $transparent;
+                    text-shadow: 0 1px 0 $white-smoke;
+                    opacity: 0.5;
+                    border: 0;
+                }
+            }
+        }
+
+        & > .col-user-credentials{
+
+            & > input[type=text]{
+                font-family: $font-poppins;
+                font-size: 1.0rem;
+                padding: 15px 22px;
+                margin: 10px 0;
+                box-sizing: border-box;
+                box-shadow: 0 0 10px #719ECE;
+            }
+
+            & > input[type=text]:focus
+            {
+                padding: 15px 15px;
+                background-color: $white-smoke;
+                transition: all 0.5s;
+            }
+
+            & > .btn-submit-lgn{
+                width: 100%;
+                background-color: $coffee-without-opacity;
+                font-family: $font-poppins;
+                font-size: 1.0rem;
+                padding: 15px 22px;
+                margin: 10px 0;
+                border: none;
+            }
+
+            & > .btn-submit-lgn:hover{
+                opacity: 0.9;
+                font-family: $font-poppins;
+                transition: all 0.5s;
+            }
+
+            & > .btn-submit-return{
+                width: 100%;
+                background-color: $orange;
+                font-family: $font-poppins;
+                font-size: 1.0rem;
+                padding: 15px 22px;
+                margin: 10px 0 20px 0;
+                border: none;
+            }
+
+            & > .btn-submit-return:hover{
+                opacity: 0.9;
+                font-family: $font-poppins;
+                transition: all 0.5s;
+            }
+        }
+
+        & > .col-user-recovery{
+
+            margin: 20px 0;
+
+            a{
+                font-size: 0.95rem;
+                margin: 15px 0;
+                text-decoration: none;
+            }
+
+            a:hover{
+                font-size: 1.0rem;
+                color: $orange;
+                font-weight: $super-bold-700;
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .login-section{
+        background-color: $transparent;
+        width: 100%;
+        position: relative;
+        margin-top: 100px;
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+
+        & > .img-login{
+
+            & > .article-login{
+
+                width: 100%;
+                margin-top: 0;
+                padding-left: 25%;
+                padding-right: 25%;
+
+                & > img{
+                    width: 20%;
+                    margin-left: 40%;
+                    margin-right: 35%;
+                    padding-left: 0% 40%;
+                }
+
+            }
+        }
+
+        & > .userCredentials{
+            width: 90%;
+            margin: 5% 5%;
+
+            & > .alert-message{
+                font-size: 0.8rem;
+                font-family: $font-poppins;
+
+                & > .alert{
+                    & > .close{
+                        float: right;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        line-height: 1;
+                        color: $red;
+                        background: $transparent;
+                        text-shadow: 0 1px 0 $white-smoke;
+                        opacity: 0.5;
+                        border: 0;
+                    }
+                }
+            }
+
+            & > .col-user-credentials{
+
+                & > input[type=text]{
+                    font-family: $font-poppins;
+                    font-size: 0.8rem;
+                    padding: 10px 20px;
+                    margin: 10px 0;
+                    box-sizing: border-box;
+                    box-shadow: 0 0 10px #719ECE;
+                }
+
+                & > input[type=text]:focus
+                {
+                    padding: 10px 15px;
+                    background-color: $white-smoke;
+                    transition: all 0.5s;
+                }
+
+
+                & > .btn-submit-lgn{
+                    width: 100%;
+                    background-color: $coffee-without-opacity;
+                    font-family: $font-poppins;
+                    font-size: 0.8rem;
+                    padding: 10px 20px;
+                    margin: 10px 0;
+                    border: none;
+                }
+
+                & > .btn-submit-lgn:hover{
+                    opacity: 0.9;
+                    font-family: $font-poppins;
+                    transition: all 0.5s;
+                }
+
+                & > .btn-submit-return{
+                    width: 100%;
+                    background-color: $orange;
+                    font-family: $font-poppins;
+                    font-size: 0.8rem;
+                    padding: 10px 20px;
+                    margin: 10px 0 20px 0;
+                    border: none;
+                }
+
+                & > .btn-submit-return:hover{
+                    opacity: 0.9;
+                    font-family: $font-poppins;
+                    transition: all 0.5s;
+                }
+            }
+
+            & > .col-user-recovery{
+
+                margin: 20px 0;
+
+                a{
+                    font-size: 0.75rem;
+                    margin: 15px 0;
+                    text-decoration: none;
+                }
+
+                a:hover{
+                    font-size: 0.8rem;
+                    color: $orange;
+                    font-weight: $super-bold-700;
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+}
