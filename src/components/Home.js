@@ -6,7 +6,7 @@ import department3 from '../images/departamento-4.jpg';
 const Home = () =>{
     return(
         <>
-        <section className="departments-carousel-section container-fluid">
+        <section className="departments-carousel-section">
             <div className="row">
 
                 <div className="col-12 col-departments">

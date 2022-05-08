@@ -1,7 +1,4 @@
-.departments-carousel-section {
-  padding-left: 0;
-  padding-right: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100&display=swap");
 .departments-carousel-section > .row > .col-departments > .carousel {
   width: 100%;
   margin-top: 75px;
@@ -57,11 +54,6 @@
 }
 
 @media (max-width: 990px) {
-  .departments-carousel-section {
-    padding-left: 0;
-    padding-right: 0;
-    position: unset;
-  }
   .departments-carousel-section > .row > .col-departments > .carousel {
     width: 100%;
     margin-top: 70px;
