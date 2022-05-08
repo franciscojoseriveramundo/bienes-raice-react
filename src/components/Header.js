@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import logo from '../images/bienes_raices.png';
+import hamburgermenu from '../images/menu.svg';
 
 const Header = () =>{
     return(
@@ -13,8 +14,8 @@ const Header = () =>{
                         </Link>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-site" aria-controls="navbar-site" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                            <img src={hamburgermenu} width="24"></img>
+                        </button>
 
                         <div className="collapse navbar-collapse" id="navbar-site">
                             <ul className="navbar-nav mx-auto mb-2 mb-lg-0 nav-bar-site">

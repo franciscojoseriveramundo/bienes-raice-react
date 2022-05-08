@@ -81,7 +81,7 @@ html, body {
 }
 .footer-page > footer > .footer-information-page > .col-company-section {
   padding: 10px 50px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .footer-page > footer > .footer-information-page > .col-company-section > .company-section > .ul-company-section > .li-company-section-header {
   list-style: none;
@@ -104,7 +104,7 @@ html, body {
 }
 .footer-page > footer > .footer-information-page > .col-contact-section {
   padding: 10px 50px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .footer-page > footer > .footer-information-page > .col-contact-section > .contact-section > .ul-contact-section {
   padding-left: 35%;
@@ -157,7 +157,7 @@ html, body {
   font-weight: 500;
   font-size: 0.9rem;
   vertical-align: middle;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*CSS General (Max: 861px - Min: 576px)*/
@@ -172,7 +172,7 @@ html, body {
   }
   .footer-page > footer > .footer-information-page > .col-company-section {
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
   }
   .footer-page > footer > .footer-information-page > .col-company-section > .company-section {
@@ -199,7 +199,7 @@ html, body {
   }
   .footer-page > footer > .footer-information-page > .col-contact-section {
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
   }
   .footer-page > footer > .footer-information-page > .col-contact-section > .contact-section {
@@ -258,11 +258,11 @@ html, body {
 /*CSS General (Max: 900px) -- Se aplica únicamente para el menu principal*/
 @media (max-width: 990px) {
   .navbar {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.9rem;
     font-weight: 500;
     font-stretch: semi-expanded;
-    background-color: #202028;
+    background-color: #f0eee8;
   }
   .navbar > .container-fluid > a > img {
     opacity: 1;
@@ -291,11 +291,10 @@ html, body {
   .nav-bar-site > .nav-item > .nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    color: #f0f0f0;
+    color: #d2691e;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-    font-variant: small-caps;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     font-size: 0.9em;
     text-align: center;
   }
@@ -317,7 +316,7 @@ html, body {
   }
   .footer-page > footer > .footer-information-page > .col-company-section {
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
   }
   .footer-page > footer > .footer-information-page > .col-company-section > .company-section {
@@ -344,7 +343,7 @@ html, body {
   }
   .footer-page > footer > .footer-information-page > .col-contact-section {
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
   }
   .footer-page > footer > .footer-information-page > .col-contact-section > .contact-section {

@@ -1,5 +1,6 @@
 @use 'global' as *;
 
+
 /*CSS General*/
 
 body{
@@ -15,6 +16,7 @@ html, body {
     margin:0;
     height:100%;
 }
+
 
 .navbar{
     font-family: $font-monserrat;
@@ -127,7 +129,7 @@ html, body {
             & > .col-company-section{
 
                 padding: 10px 50px;
-                font-family: $font-roboto;
+                font-family: $font-monserrat;
 
                 & > .company-section{
 
@@ -164,7 +166,7 @@ html, body {
 
             & > .col-contact-section{
                 padding: 10px 50px;
-                font-family: $font-roboto;
+                font-family: $font-monserrat;
 
                 & > .contact-section{
 
@@ -238,7 +240,7 @@ html, body {
                         font-weight: $super-bold-500;
                         font-size: 0.9rem;
                         vertical-align: middle;
-                        font-family: $font-roboto;
+                        font-family: $font-monserrat;
                     }
                 }
             }
@@ -263,7 +265,7 @@ html, body {
                 & > .col-company-section{
 
                     padding: 0;
-                    font-family: $font-roboto;
+                    font-family: $font-monserrat;
                     margin: 0;
 
                     & > .company-section{
@@ -303,7 +305,7 @@ html, body {
                 & > .col-contact-section{
 
                     padding: 0;
-                    font-family: $font-roboto;
+                    font-family: $font-monserrat;
                     margin: 0;
 
                     & > .contact-section{
@@ -395,11 +397,11 @@ html, body {
 
 
     .navbar{
-        font-family: $font-sans;
+        font-family: $font-monserrat;
         font-size: 0.9rem;
         font-weight: $super-bold-500;
         font-stretch: semi-expanded;
-        background-color: $coffee-without-opacity;
+        background-color: $background-nav;
         // margin-top: -50px;
 
         & > .container-fluid{
@@ -442,11 +444,10 @@ html, body {
             & > .nav-link{
                 display: block;
                 padding: 0.5rem 1rem;
-                color: #f0f0f0;
+                color: $chocolate;
                 text-decoration: none;
                 transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-                font-variant: small-caps;
-                letter-spacing: 0.1em;
+                letter-spacing: 0.15em;
                 font-size: 0.9em;
                 text-align: center;
 
@@ -481,7 +482,7 @@ html, body {
                 & > .col-company-section{
 
                     padding: 0;
-                    font-family: $font-roboto;
+                    font-family: $font-monserrat;
                     margin: 0;
 
                     & > .company-section{
@@ -517,7 +518,7 @@ html, body {
                 & > .col-contact-section{
 
                     padding: 0;
-                    font-family: $font-roboto;
+                    font-family: $font-monserrat;
                     margin: 0;
 
                     & > .contact-section{
