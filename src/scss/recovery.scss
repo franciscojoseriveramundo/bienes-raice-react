@@ -42,7 +42,7 @@ body{
 
         & > .alert-message{
 
-            font-family: $font-poppins;
+            font-family: $font-monserrat;
 
             & > .alert{
                 & > .close{
@@ -62,7 +62,7 @@ body{
         & > .col-user-credentials{
 
             & > input[type=text]{
-                font-family: $font-poppins;
+                font-family: $font-monserrat;
                 font-size: 1.0rem;
                 padding: 15px 22px;
                 margin: 10px 0;
@@ -80,7 +80,7 @@ body{
             & > .btn-submit-lgn{
                 width: 100%;
                 background-color: $coffee-without-opacity;
-                font-family: $font-poppins;
+                font-family: $font-monserrat;
                 font-size: 1.0rem;
                 padding: 15px 22px;
                 margin: 10px 0;
@@ -89,14 +89,14 @@ body{
 
             & > .btn-submit-lgn:hover{
                 opacity: 0.9;
-                font-family: $font-poppins;
+                font-family: $font-monserrat;
                 transition: all 0.5s;
             }
 
             & > .btn-submit-return{
                 width: 100%;
                 background-color: $orange;
-                font-family: $font-poppins;
+                font-family: $font-monserrat;
                 font-size: 1.0rem;
                 padding: 15px 22px;
                 margin: 10px 0 20px 0;
@@ -105,7 +105,7 @@ body{
 
             & > .btn-submit-return:hover{
                 opacity: 0.9;
-                font-family: $font-poppins;
+                font-family: $font-monserrat;
                 transition: all 0.5s;
             }
         }
@@ -168,7 +168,7 @@ body{
 
             & > .alert-message{
                 font-size: 0.8rem;
-                font-family: $font-poppins;
+                font-family: $font-monserrat;
 
                 & > .alert{
                     & > .close{
@@ -188,7 +188,7 @@ body{
             & > .col-user-credentials{
 
                 & > input[type=text]{
-                    font-family: $font-poppins;
+                    font-family: $font-monserrat;
                     font-size: 0.8rem;
                     padding: 10px 20px;
                     margin: 10px 0;
@@ -207,7 +207,7 @@ body{
                 & > .btn-submit-lgn{
                     width: 100%;
                     background-color: $coffee-without-opacity;
-                    font-family: $font-poppins;
+                    font-family: $font-monserrat;
                     font-size: 0.8rem;
                     padding: 10px 20px;
                     margin: 10px 0;
@@ -216,14 +216,14 @@ body{
 
                 & > .btn-submit-lgn:hover{
                     opacity: 0.9;
-                    font-family: $font-poppins;
+                    font-family: $font-monserrat;
                     transition: all 0.5s;
                 }
 
                 & > .btn-submit-return{
                     width: 100%;
                     background-color: $orange;
-                    font-family: $font-poppins;
+                    font-family: $font-monserrat;
                     font-size: 0.8rem;
                     padding: 10px 20px;
                     margin: 10px 0 20px 0;
@@ -232,7 +232,7 @@ body{
 
                 & > .btn-submit-return:hover{
                     opacity: 0.9;
-                    font-family: $font-poppins;
+                    font-family: $font-monserrat;
                     transition: all 0.5s;
                 }
             }

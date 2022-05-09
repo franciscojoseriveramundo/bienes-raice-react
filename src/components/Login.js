@@ -1,5 +1,6 @@
 import LoginImg from '../images/login.png';
 import '../css/login.css';
+import {Link} from 'react-router-dom';
 
 const Login = () =>{
     return(
@@ -37,7 +38,7 @@ const Login = () =>{
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-user-recovery">
                     <div className="form-group text-center m-t-10 mb-0 row">
                         <div className="col-sm-12 m-t-20">
-                            <a href="recovery.html" className="text-muted"><i className="fa fa-unlock"></i> <small>Olvide mi contraseña</small></a>
+                            <Link to="/recovery" className="text-muted"><i className="fa fa-unlock"></i>Olvide mi contraseña</Link>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,94 @@
+@use 'global' as *;
+
+body{
+    background-color: $white-smoke;
+    height: auto;
+}
+
+.register-section{
+    background-color: $white;
+    width: 80%;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 15px;
+    border: none;
+    -webkit-box-shadow: 1px 0px 20px rgb(0 0 0 / 5%);
+    box-shadow: 1px 0px 20px rgb(0 0 0 / 5%);
+
+
+    & > .register-form{
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+        & > h3{
+            font-family: $font-monserrat;
+            font-weight: $super-bold-bolder;
+            color: $chocolate;
+        }
+
+        & > .alert-message{
+
+            margin-top: 20px;
+            font-family: $font-monserrat;
+
+            & > .alert{
+                & > .close{
+                    float: right;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    line-height: 1;
+                    color: $red;
+                    background: $transparent;
+                    text-shadow: 0 1px 0 $white-smoke;
+                    opacity: 0.5;
+                    border: 0;
+                }
+            }
+        }
+
+        & > .col-user-data{
+            & > input[type=text]{
+                font-family: $font-monserrat;
+                font-size: 0.9em;
+                padding: 10px 20px;
+                margin: 10px 0;
+                box-sizing: border-box;
+                box-shadow: 0 0 10px #719ECE;
+            }
+
+            & > input[type=text]:focus
+            {
+                padding: 10px 15px;
+                background-color: $white-smoke;
+                transition: all 0.5s;
+            }
+
+            & > .lbl-col-user-data{
+                font-family: $font-monserrat;
+                font-size: 0.9em;
+                font-weight: $super-bold-bolder;
+
+            }
+
+            & > .btn-submit-register{
+                width: 100%;
+                background-color: $coffee-without-opacity;
+                font-family: $font-monserrat;
+                font-size: 0.9em;
+                padding: 10px 20px;
+                margin: 10px 0;
+                border: none;
+                margin-top: 20px;
+            }
+        }
+
+    }
+
+
+
+}

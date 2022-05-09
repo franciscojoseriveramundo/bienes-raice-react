@@ -47,7 +47,7 @@ body{
             & > .alert{
                 & > .close{
                     float: right;
-                    font-size: 1.5rem;
+                    font-size: 1.5em;
                     font-weight: 700;
                     line-height: 1;
                     color: $red;
@@ -63,7 +63,7 @@ body{
 
             & > input[type=text]{
                 font-family: $font-monserrat;
-                font-size: 1.0rem;
+                font-size: 1.0em;
                 padding: 15px 22px;
                 margin: 10px 0;
                 box-sizing: border-box;
@@ -79,7 +79,7 @@ body{
 
             & > input[type=password]{
                 font-family: $font-monserrat;
-                font-size: 1.0rem;
+                font-size: 1.0em;
                 padding: 15px 22px;
                 margin: 10px 0;
                 box-sizing: border-box;
@@ -97,7 +97,7 @@ body{
                 width: 100%;
                 background-color: $coffee-without-opacity;
                 font-family: $font-monserrat;
-                font-size: 1.0rem;
+                font-size: 1.0em;
                 padding: 15px 22px;
                 margin: 10px 0;
                 border: none;
@@ -115,13 +115,15 @@ body{
             margin: 20px 0;
 
             a{
-                font-size: 0.95rem;
+                font-size: 0.95em;
                 margin: 15px 0;
                 text-decoration: none;
+                font-family: $font-monserrat;
+                font-size: 0.7em;
             }
 
             a:hover{
-                font-size: 1.0rem;
+                font-size: 0.8em;
                 color: $orange;
                 font-weight: $super-bold-700;
                 transition: all 0.5s;
@@ -167,13 +169,13 @@ body{
             margin: 5% 5%;
 
             & > .alert-message{
-                font-size: 0.8rem;
+                font-size: 0.8em;
                 font-family: $font-monserrat;
 
                 & > .alert{
                     & > .close{
                         float: right;
-                        font-size: 1.4rem;
+                        font-size: 1.4em;
                         font-weight: 700;
                         line-height: 1;
                         color: $red;
@@ -189,7 +191,7 @@ body{
 
                 & > input[type=text]{
                     font-family: $font-monserrat;
-                    font-size: 0.8rem;
+                    font-size: 0.8em;
                     padding: 10px 20px;
                     margin: 10px 0;
                     box-sizing: border-box;
@@ -205,7 +207,7 @@ body{
 
                 & > input[type=password]{
                     font-family: $font-monserrat;
-                    font-size: 0.8rem;
+                    font-size: 0.8em;
                     padding: 10px 20px;
                     margin: 10px 0;
                     box-sizing: border-box;
@@ -223,7 +225,7 @@ body{
                     width: 100%;
                     background-color: $coffee-without-opacity;
                     font-family: $font-monserrat;
-                    font-size: 0.8rem;
+                    font-size: 0.8em;
                     padding: 10px 20px;
                     margin: 10px 0;
                     border: none;
@@ -241,13 +243,13 @@ body{
                 margin: 20px 0;
 
                 a{
-                    font-size: 0.75rem;
+                    font-size: 0.9em !important;
                     margin: 15px 0;
                     text-decoration: none;
                 }
 
                 a:hover{
-                    font-size: 0.8rem;
+                    font-size: 0.95em !important;
                     color: $orange;
                     font-weight: $super-bold-700;
                     transition: all 0.5s;
