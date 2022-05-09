@@ -26,12 +26,14 @@ const Header = () =>{
                                     <Link className="nav-link hvr-underline-from-left" to="/search">Buscar</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link hvr-underline-from-left" to="/login">Iniciar sesión</Link>
-                                </li>
-                                <li className="nav-item">
                                     <Link className="nav-link hvr-underline-from-left" to="/about">Acerca de</Link>
                                 </li>
                             </ul>
+
+                            <Link to="/login" className="btn btn-primary btn-login">Iniciar sesión</Link>
+                            <label> o </label>
+                            <Link to="/register" className="btn-register">Registrate</Link>
+
                         </div>
                     </div>
 

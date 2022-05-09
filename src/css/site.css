@@ -54,8 +54,13 @@ html, body {
   margin-right: 0px !important;
   line-height: 2.5;
   margin-bottom: 0 !important;
+  margin-left: 250px !important;
+}
+.nav-bar-site > .nav-item {
+  width: 200px;
 }
 .nav-bar-site > .nav-item > .nav-link {
+  text-align: center;
   display: block;
   padding: 0.2rem 1rem;
   color: chocolate;
@@ -70,6 +75,37 @@ html, body {
   background-color: rgba(117, 121, 120, 0.4);
   border-bottom: 2px solid #f0f0f0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 1s ease-in-out;
+}
+
+.btn-login {
+  font-size: 14px !important;
+  font-family: "Montserrat", sans-serif !important;
+  background-color: #d2691e !important;
+  border: 1px solid #d2691e !important;
+  margin-right: 5px;
+}
+
+.btn-login:hover {
+  opacity: 0.8;
+}
+
+.btn-register {
+  text-decoration: none;
+  color: #fd7e14;
+  font-size: 0.9em;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  margin-left: 5px;
+}
+
+.btn-register:hover {
+  opacity: 0.5;
+  color: #d2691e;
 }
 
 .footer-page {

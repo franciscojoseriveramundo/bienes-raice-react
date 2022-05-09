@@ -91,10 +91,13 @@ html, body {
     margin-right: 0px !important;
     line-height: 2.5;
     margin-bottom: 0 !important;
+    margin-left: 250px !important;
 
     & > .nav-item{
+        width: 200px;
 
         & > .nav-link{
+            text-align: center;
             display: block;
             padding: 0.2rem 1rem;
             color: chocolate;
@@ -112,6 +115,37 @@ html, body {
             transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 1s ease-in-out;
         }
     }
+}
+
+.btn-login{
+    font-size: 14px !important;
+    font-family: $font-monserrat !important;
+    background-color: $chocolate !important;
+    border: 1px solid $chocolate !important;
+    margin-right: 5px;
+}
+
+.btn-login:hover{
+    opacity: 0.8;
+}
+
+.btn-register{
+    text-decoration: none;
+    color: $orange;
+    font-size: 0.9em;
+    font-family: $font-monserrat;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+.btn-register:hover{
+    opacity: 0.5;
+    color:$chocolate
 }
 
 .footer-page{
