@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/recovery.css';
 import Image from '../images/login.png';
 
@@ -14,12 +15,12 @@ const Recovery = () =>{
             <div className="row userCredentials">
 
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 alert-message">
-                <div className="alert alert-success" role="alert">
-                    Ingrese su correo electrónico a recuperar el acceso.
-                    <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
+                    <div className="alert alert-success" role="alert">
+                        Ingrese su correo electrónico a recuperar el acceso.
+                        <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
                 </div>
 
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-user-credentials">
@@ -31,7 +32,7 @@ const Recovery = () =>{
                 </div>
 
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-user-credentials">
-                    <button type="submit" className="btn btn-primary btn-submit-return" onclick="window.location.href = 'login.html'">Regresar al inicio de sesión</button>
+                    <Link to="/login" className="btn btn-primary btn-submit-return">Ir al inicio de sesión</Link>
                 </div>
 
             </div>
