@@ -25,21 +25,15 @@ const Register = () =>{
           //  alert("Las contraseñas no coinciden");
         //}
         new Promise((resolve, reject) =>{
-            var Codigo = 0;
-            var Mensaje = '';
-
             axios.get(`http://127.0.0.1:4000/v1/products`)
             .then(res => {
                 const persons = res.data.response;
                 const result = Object.values(JSON.parse(JSON.stringify(persons)));
                 //alert(result);
                 result.forEach((v) =>{
-                    console.log(v.Code);
-                    console.log(v.Message);
+                    console.log(v.ProductsId);
                 });
                 //alert(response);
-
-
                 resolve(result);
             }).catch(err => () => {
                 reject(err);
