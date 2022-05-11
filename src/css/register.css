@@ -60,6 +60,11 @@ body {
   box-sizing: border-box;
   box-shadow: 0 0 10px #719ECE;
 }
+.register-section > .register-form > .col-user-data > #cbxSexo:hover {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  transition: all 0.5s;
+}
 .register-section > .register-form > .col-user-data > #cbxPassword {
   font-family: "Montserrat", sans-serif;
   font-size: 0.9em;
@@ -67,6 +72,24 @@ body {
   margin: 10px 0;
   box-sizing: border-box;
   box-shadow: 0 0 10px #719ECE;
+}
+.register-section > .register-form > .col-user-data > #cbxPassword:hover {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  transition: all 0.5s;
+}
+.register-section > .register-form > .col-user-data > #cbxConfirmPassword {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+  padding: 10px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #719ECE;
+}
+.register-section > .register-form > .col-user-data > #cbxConfirmPassword:hover {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  transition: all 0.5s;
 }
 .register-section > .register-form > .col-user-data > input[type=text]:focus {
   padding: 10px 15px;
