@@ -24,7 +24,7 @@ const Register = () =>{
         //if(confirmpassword !== password){
           //  alert("Las contraseñas no coinciden");
         //}
-        new Promise((resolve, reject) =>{
+        /*new Promise((resolve, reject) =>{
             axios.get(`http://127.0.0.1:4000/v1/products`)
             .then(res => {
                 const persons = res.data.response;
@@ -38,8 +38,31 @@ const Register = () =>{
             }).catch(err => () => {
                 reject(err);
             });
-        });
+        });*/
 
+        const user = {
+                "Username": name,
+                "UserLastName": lastName,
+                "UsersSex": sex,
+                "UsersRoleId": 1,
+                "UsersStatusId": 4,
+                "UsersPassword": password,
+                "UsersEmail": email,
+                "UsersPhone": confirmpassword,
+          };
+          new Promise((resolve, reject) =>
+          {  axios.post(`http://127.0.0.1:4000/v1/users/create`, { user })
+            .then(res => {
+                const persons = res.data.response;
+                const result = Object.values(JSON.parse(JSON.stringify(persons)));
+                //alert(result);
+                result.forEach((v) =>{
+                    alert(v.Message);
+                });
+                //alert(response);
+                resolve(result);
+          })
+        });
 
     }
 
