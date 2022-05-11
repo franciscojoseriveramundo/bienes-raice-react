@@ -37,7 +37,7 @@ const Register = () =>{
                 resolve(result);
             }).catch(err => () => {
                 reject(err);
-            });
+            });prueb
         });*/
 
         const user = {
