@@ -40,6 +40,10 @@ const Register = () =>{
                     <label className='lbl-col-user-data'>* Correo electrónico</label>
                     <input type="text" className="form-control" id="txtEmail" placeholder="Ingresa tu correo electrónico"/>
                 </div>
+                <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-user-data">
+                    <label className='lbl-col-user-data'>* Password </label>
+                    <input type="password" className="form-control" id="cbxPassword" placeholder="Ingresa tu Password"/>
+                </div>
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-user-data">
                     <button type="submit" className="btn btn-primary btn-submit-register">Registrar</button>
                 </div>
