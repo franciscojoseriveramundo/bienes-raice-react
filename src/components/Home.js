@@ -6,6 +6,7 @@ import department3 from '../images/departamento-4.jpg';
 const Home = () =>{
     return(
         <>
+        <div id="wrapper">
         <section className="departments-carousel-section">
             <div className="row">
 
@@ -36,7 +37,7 @@ const Home = () =>{
 
             </div>
         </section>
-
+        </div>
         </>
     )
 }

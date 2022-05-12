@@ -5,6 +5,142 @@ body{
     height: auto;
 }
 
+.footer-page{
+
+    background-color: $coffee-without-opacity;
+    color: $white-smoke;
+    //position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    position: relative !important;
+
+    & > footer {
+
+        & > .footer-information-page{
+
+            & > .col-company-section{
+
+                padding: 10px 50px;
+                font-family: $font-monserrat;
+
+                & > .company-section{
+
+                    & > .ul-company-section{
+
+                        & > .li-company-section-header{
+                            list-style: none;
+                            font-weight: $super-bold-700;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 1.0rem;
+                        }
+
+                        & > .li-company-section-items{
+                            list-style: none;
+                            font-weight: $super-bold-200;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 0.9rem;
+                            margin-left: 0;
+
+
+                        }
+
+                        & > .li-company-section-items:hover{
+                            color: $orange;
+                            font-weight: $super-bold-700;
+                        }
+
+
+                    }
+                }
+            }
+
+            & > .col-contact-section{
+                padding: 10px 50px;
+                font-family: $font-monserrat;
+
+                & > .contact-section{
+
+                    & > .ul-contact-section{
+                        padding-left: 35%;
+
+                        & > .li-contact-section-header{
+                            list-style: none;
+                            font-weight: $super-bold-700;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 1.0rem;
+                            margin-left: 0;
+                        }
+
+                        & > .li-contact-section-items{
+                            list-style: none;
+                            font-weight: $super-bold-200;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 0.9rem;
+                            margin-left: 0;
+
+                            & > .whatsapp-icon-footer{
+                                margin-right: 10px;
+                            }
+                        }
+
+                        & > .li-contact-section-items:hover{
+                            color: $orange;
+                            font-weight: $super-bold-700;
+                        }
+                    }
+                }
+
+                & > .social-section{
+
+                    & > .ul-social-section{
+                        padding-left: 35%;
+
+                        & > .li-social-section-header{
+                            list-style: none;
+                            font-weight: $super-bold-700;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 1.0rem;
+                        }
+
+                        & > .li-social-section-items{
+                            list-style: none;
+                            display: inline-block;
+                            margin-bottom: 30px;
+                            margin-top: 0;
+                            margin-left: 0;
+                        }
+
+                        & > .li-social-section-items :hover{
+                            opacity: 0.5;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        & > .footer-copyright{
+            & > .col-copyright{
+                & > .copyright-section{
+                    & > .p-copyright{
+                        margin: 20px 0;
+                        font-weight: $super-bold-500;
+                        font-size: 0.9rem;
+                        vertical-align: middle;
+                        font-family: $font-monserrat;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .register-section{
     background-color: $white;
     width: 80%;

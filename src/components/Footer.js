@@ -9,7 +9,7 @@ import FooterCopyright from "./FooterCopyright";
 
 const Footer = () =>{
     return(
-        <section className="footer-page">
+        <section className="footer-page" style={{position: 'relative'}}>
             <footer className="container-fluid">
                 <div className="row footer-information-page">
                     <div className="col-xl-6 col-lg-6 col-sm-6 col-xs-12 col-company-section">
@@ -28,7 +28,7 @@ const Footer = () =>{
                         <ul className="ul-contact-section">
                             <li className="li-contact-section-header">Contáctanos</li>
                             <li className="li-contact-section-items">
-                                <img src={Whatsapp} className="whatsapp-icon-footer" width="24"/>
+                                <img src={Whatsapp} className="whatsapp-icon-footer" width="24" alt="Whatsapp"/>
                                 55 8640 9441
                             </li>
                             <li className="li-contact-section-items">pacoriveram2017@gmail.com</li>
@@ -39,22 +39,22 @@ const Footer = () =>{
                                 <li className="li-social-section-header">Nuestras redes sociales</li>
                                 <li className="li-social-section-items">
                                     <Link to="https://www.facebook.com">
-                                        <img src={Facebook}/>
+                                        <img src={Facebook} alt="Facebook"/>
                                     </Link>
                                 </li>
                                 <li className="li-social-section-items">
                                     <Link to="https://www.instagram.com">
-                                        <img src={Instagram}/>
+                                        <img src={Instagram} alt="Instagram"/>
                                     </Link>
                                 </li>
                                 <li className="li-social-section-items">
-                                    <Link to="https://www.twitter.com">
-                                        <img src={Twitter}/>
+                                    <Link to="https://www.twitter.com" >
+                                        <img src={Twitter} alt="Twitter"/>
                                     </Link>
                                 </li>
                                 <li className="li-social-section-items">
-                                    <Link to="https://www.youtube.com">
-                                        <img src={Youtube}/>
+                                    <Link to="https://www.youtube.com" >
+                                        <img src={Youtube} alt="Youtube"/>
                                     </Link>
                                 </li>
                             </ul>

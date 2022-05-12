@@ -15,15 +15,20 @@ const Register = () =>{
 
     const HandleCrear = () =>{
 
-        var response = [];
+        //var response = [];
 
-        //if(!name || !lastName || sex === "0" || !phone || !email || !password || !confirmpassword){
-        //    alert("Complete los campos obligatorios");
-        //}
+        var isContinue = true;
 
-        //if(confirmpassword !== password){
-          //  alert("Las contraseñas no coinciden");
-        //}
+        if(!name || !lastName || sex === "0" || !phone || !email || !password || !confirmpassword){
+            isContinue = false;
+            alert("Complete los campos obligatorios");
+        }
+
+        if(confirmpassword !== password){
+            isContinue = false;
+            alert("Las contraseñas no coinciden");
+        }
+
         /*new Promise((resolve, reject) =>{
             axios.get(`http://127.0.0.1:4000/v1/products`)
             .then(res => {
@@ -40,7 +45,11 @@ const Register = () =>{
             });prueb
         });*/
 
-        const user = {
+        if(isContinue === true){
+
+          new Promise((resolve, reject) =>
+          {
+            axios.post(`http://127.0.0.1:4000/v1/users/create`, {
                 "Username": name,
                 "UserLastName": lastName,
                 "UsersSex": sex,
@@ -48,21 +57,19 @@ const Register = () =>{
                 "UsersStatusId": 4,
                 "UsersPassword": password,
                 "UsersEmail": email,
-                "UsersPhone": confirmpassword,
-          };
-          new Promise((resolve, reject) =>
-          {  axios.post(`http://127.0.0.1:4000/v1/users/create`, { user })
-            .then(res => {
-                const persons = res.data.response;
-                const result = Object.values(JSON.parse(JSON.stringify(persons)));
-                //alert(result);
-                result.forEach((v) =>{
-                    alert(v.Message);
-                });
-                //alert(response);
-                resolve(result);
-          })
-        });
+                "UsersPhone": confirmpassword
+            }).then(res => {
+                    const persons = res.data.response;
+                    const result = Object.values(JSON.parse(JSON.stringify(persons)));
+                    //alert(result);
+                    result.forEach((v) =>{
+                        alert(v.Message);
+                    });
+                    //alert(response);
+                    resolve(result);
+                })
+            });
+        }
 
     }
 

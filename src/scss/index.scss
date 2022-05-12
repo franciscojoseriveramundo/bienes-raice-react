@@ -7,6 +7,8 @@
     margin: 0;
     padding-right: 0;
     overflow-x: hidden;
+    z-index: 1000000;
+    position: relative;
 
     & > .row{
         & > .col-departments{
@@ -23,7 +25,8 @@
                     & > .carousel-item{
                         & > img{
                             object-fit: cover;
-                            max-height: 400px;
+                            min-height: 400px;
+                            max-height: 514px;
                         }
                     }
                 }
@@ -129,13 +132,15 @@
     // }
 }
 
-@media (max-width: 990px){
+@media (max-width: 576px){
 
     .departments-carousel-section{
 
         margin: 0;
         padding-right: 0;
         overflow-x: hidden;
+        z-index: 1000000;
+        position: relative;
 
         & > .row{
             & > .col-departments{
@@ -151,7 +156,7 @@
 
                         & > .carousel-item{
                             & > img{
-                                max-height: 400px;
+                                min-height: 520px;
                                 object-fit: fill;
                             }
                         }

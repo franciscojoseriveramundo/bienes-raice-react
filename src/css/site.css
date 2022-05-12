@@ -5,7 +5,6 @@ body {
   background-color: transparent;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  margin: 0;
   overflow-x: hidden;
 }
 
@@ -13,6 +12,15 @@ html, body {
   padding: 0;
   margin: 0;
   height: 100%;
+}
+
+header {
+  position: relative;
+  z-index: 10000001;
+}
+
+nav {
+  position: absolute;
 }
 
 .navbar {
@@ -111,9 +119,10 @@ html, body {
 .footer-page {
   background-color: #202028;
   color: #f0f0f0;
-  position: absolute;
   left: 0;
   right: 0;
+  bottom: 0;
+  position: relative !important;
 }
 .footer-page > footer > .footer-information-page > .col-company-section {
   padding: 10px 50px;
@@ -188,6 +197,9 @@ html, body {
 .footer-page > footer > .footer-information-page > .col-contact-section > .social-section > .ul-social-section > .li-social-section-items :hover {
   opacity: 0.5;
 }
+.footer-page > footer > .footer-copyright {
+  margin-top: 87px;
+}
 .footer-page > footer > .footer-copyright > .col-copyright > .copyright-section > .p-copyright {
   margin: 20px 0;
   font-weight: 500;
@@ -196,15 +208,31 @@ html, body {
   font-family: "Montserrat", sans-serif;
 }
 
-/*CSS General (Max: 861px - Min: 576px)*/
-@media (max-width: 861px) and (min-width: 576px) {
+@media (max-width: 862px) and (min-width: 577px) {
   .footer-page {
     background-color: #202028;
     color: #f0f0f0;
-    position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
+    position: absolute !important;
+  }
+}
+@media (max-width: 576px) {
+  .footer-page {
+    background-color: #202028;
+    color: #f0f0f0;
+    left: 0;
+    right: 0;
+    position: relative !important;
     transition: right 0.5s;
+  }
+}
+/*CSS General (Max: 861px - Min: 576px)*/
+@media (max-width: 862px) and (min-width: 576px) {
+  .footer-page {
+    background-color: #202028;
+    color: #f0f0f0;
   }
   .footer-page > footer > .footer-information-page > .col-company-section {
     padding: 0;
@@ -284,6 +312,9 @@ html, body {
   }
   .footer-page > footer > .footer-information-page > .col-contact-section > .social-section > .ul-social-section > .li-social-section-items :hover {
     opacity: 0.5;
+  }
+  .footer-page > footer > .footer-copyright {
+    margin-top: 87px;
   }
   .footer-page > footer > .footer-copyright > .col-copyright > .copyright-section > .p-copyright {
     margin: 20px 0;
@@ -345,10 +376,11 @@ html, body {
   .footer-page {
     background-color: #202028;
     color: #f0f0f0;
-    position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
     transition: right 0.5s;
+    position: relative;
   }
   .footer-page > footer > .footer-information-page > .col-company-section {
     padding: 0;
@@ -428,6 +460,9 @@ html, body {
   }
   .footer-page > footer > .footer-information-page > .col-contact-section > .social-section > .ul-social-section > .li-social-section-items :hover {
     opacity: 0.5;
+  }
+  .footer-page > footer > .footer-copyright {
+    margin-top: 87px;
   }
   .footer-page > footer > .footer-copyright > .col-copyright > .copyright-section > .p-copyright {
     margin: 20px 0;
