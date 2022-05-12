@@ -1,6 +1,7 @@
 import LoginImg from '../images/login.png';
 import '../css/login.css';
 import {Link} from 'react-router-dom';
+const emailRegexp = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
 
 const Login = () =>{
     return(
