@@ -2,6 +2,8 @@ import '../css/register.css';
 import React, {Component} from 'react';
 import { render } from 'react-dom';
 import axios from 'axios';
+import validator from 'validator';
+const emailRegexp = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
 
 class Register extends Component {
 
@@ -28,6 +30,24 @@ class Register extends Component {
             isContinue = false;
             this.setState({
                 mensaje: "Complete los campos obligatorios",
+                alert: 'alert alert-danger'
+            });
+            console.log(this.state.mensaje);
+        }
+
+        if(!this.state.email.match(emailRegexp)){
+            isContinue = false;
+            this.setState({
+                mensaje: "La dirección de correo electrónico no es válida.",
+                alert: 'alert alert-danger'
+            });
+            console.log(this.state.mensaje);
+        }
+
+        if(!validator.isMobilePhone(this.state.phone)){
+            isContinue = false;
+            this.setState({
+                mensaje: "El número de teléfono no es válido.",
                 alert: 'alert alert-danger'
             });
             console.log(this.state.mensaje);
