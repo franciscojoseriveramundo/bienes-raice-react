@@ -80,7 +80,7 @@ class Register extends Component {
                             mensaje: v.Message
                         });
 
-                        if(v.Code === 1){
+                        if(v.Code === "1"){
                             this.setState({
                                 alert: 'alert alert-success',
                                 name : '',
