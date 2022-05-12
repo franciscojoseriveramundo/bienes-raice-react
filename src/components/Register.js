@@ -10,7 +10,7 @@ class Register extends Component {
     constructor(props){
         super(props);
         this.state ={
-            mensaje : 'Complete los campos para poder crear su cuenta de acceso.',
+            mensaje : '(*) Complete los campos para poder crear su cuenta de acceso.',
             alert: 'alert alert-info',
             name : '',
             lastName: '',
@@ -29,34 +29,34 @@ class Register extends Component {
         if(!this.state.name || !this.state.lastName || this.state.sex === "0" || !this.state.phone || !this.state.email || !this.state.password || !this.state.confirmpassword){
             isContinue = false;
             this.setState({
-                mensaje: "Complete los campos obligatorios",
+                mensaje: "(*) Complete los campos obligatorios.",
                 alert: 'alert alert-danger'
             });
             console.log(this.state.mensaje);
         }
 
-        if(!this.state.email.match(emailRegexp)){
+        if(!this.state.email.match(emailRegexp) && isContinue === true){
             isContinue = false;
             this.setState({
-                mensaje: "La dirección de correo electrónico no es válida.",
+                mensaje: "* La dirección de correo electrónico no es válida.",
                 alert: 'alert alert-danger'
             });
             console.log(this.state.mensaje);
         }
 
-        if(!validator.isMobilePhone(this.state.phone)){
+        if(!validator.isMobilePhone(this.state.phone) && isContinue === true){
             isContinue = false;
             this.setState({
-                mensaje: "El número de teléfono no es válido.",
+                mensaje: "* El número de teléfono no es válido.",
                 alert: 'alert alert-danger'
             });
             console.log(this.state.mensaje);
         }
 
-        if(this.state.confirmpassword !== this.state.password){
+        if(this.state.confirmpassword !== this.state.password && isContinue === true){
             isContinue = false;
             this.setState({
-                mensaje: "Las contraseñas no coinciden.",
+                mensaje: "* Las contraseñas no coinciden.",
                 alert: 'alert alert-warning'
             });
             console.log(this.state.mensaje);
