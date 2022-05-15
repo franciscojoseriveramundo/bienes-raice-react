@@ -14,7 +14,7 @@ const Header = () =>{
                         </Link>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-site" aria-controls="navbar-site" aria-expanded="false" aria-label="Toggle navigation">
-                            <img src={hamburgermenu} width="24"></img>
+                            <img src={hamburgermenu} width="24" alt=""></img>
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbar-site">

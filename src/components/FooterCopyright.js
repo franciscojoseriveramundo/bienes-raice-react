@@ -1,7 +1,7 @@
 import React from "react";
 
 const FooterCopyright = () =>{
-    const[state, setState] = React.useState({
+    const[state] = React.useState({
         anio : new Date().getFullYear().toString()
     });
 

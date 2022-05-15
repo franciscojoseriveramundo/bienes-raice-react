@@ -1,8 +1,8 @@
 import '../css/register.css';
 import React, {Component} from 'react';
-import { render } from 'react-dom';
 import axios from 'axios';
 import validator from 'validator';
+import CryptoAES from 'crypto-js/aes';
 const emailRegexp = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
 
 class Register extends Component {
@@ -62,6 +62,20 @@ class Register extends Component {
             console.log(this.state.mensaje);
         }
 
+        if(isContinue === true){
+            if (!validator.isStrongPassword(this.state.password, {
+                minLength: 8, minLowercase: 1,
+                minUppercase: 1, minNumbers: 1, minSymbols: 1
+              }))
+              {
+                isContinue = false;
+                this.setState({
+                    mensaje: "* La contraseña introducida no es segura (min. 8 carácteres, 1 letra minúscula, 1 letra mayúscula, 1 número y un símbolo).",
+                    alert: 'alert alert-warning'
+                });
+                console.log(this.state.mensaje);
+              }
+        }
         /*new Promise((resolve, reject) =>{
             axios.get(`http://127.0.0.1:4000/v1/products`)
             .then(res => {
@@ -82,15 +96,22 @@ class Register extends Component {
 
           new Promise((resolve, reject) =>
           {
-            axios.post(`http://127.0.0.1:4000/v1/users/create`, {
+            /*Desencriptar
+            import CryptoENC from 'crypto-js/enc-utf8';
+            var _ciphertext = CryptoAES.decrypt(ciphertext.toString(), 'secret key 123');
+            console.log(_ciphertext.toString(CryptoENC));
+            */
+
+
+            axios.post(`https://bienes-raices-350122.uc.r.appspot.com/v1/users/create`, {
                 "Username": this.state.name,
                 "UserLastName": this.state.lastName,
                 "UsersSex": this.state.sex,
                 "UsersRoleId": 1,
                 "UsersStatusId": 4,
-                "UsersPassword": this.state.password,
+                "UsersPassword": CryptoAES.encrypt(this.state.password, 'secret key 123').toString(),
                 "UsersEmail": this.state.email,
-                "UsersPhone": this.state.confirmpassword
+                "UsersPhone": this.state.phone
             }).then(res => {
                     const persons = res.data.response;
                     const result = Object.values(JSON.parse(JSON.stringify(persons)));
@@ -121,11 +142,49 @@ class Register extends Component {
                     });
                     //alert(response);
                     resolve(result);
+                }).catch(err =>{
+                    this.setState({
+                        mensaje: err,
+                        alert: 'alert alert-danger'
+                    });
+                    console.log(this.state.mensaje);
                 })
             });
         }
 
     }
+
+    handleInputChange = e => {
+        let isValid = true;
+
+        const {name, value} = e.target;
+
+        if(name === "password" || name === "confirmpassword"){
+            if(e.target.value.length > 51){
+                isValid = false;
+            }
+        }
+        else{
+            if(e.target.value.length > 256){
+                isValid = false;
+            }
+        }
+
+        if(isValid){
+            this.setState({[name]: value});
+        }
+    }
+
+    changePhone = e => {
+        const esValido = e.target.validity.valid;
+        if (esValido) {
+            if(e.target.value.length < 11){
+                this.setState({
+                    phone: e.target.value
+                  });
+            }
+        }
+    };
 
     render(){
         return(
@@ -145,15 +204,15 @@ class Register extends Component {
 
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-user-data">
                         <label className='lbl-col-user-data'>* Nombre(s)</label>
-                        <input type="text" className="form-control" id="txtName" placeholder="Ingresa tu nombre(s)" onChange={(e) => this.setState({name:e.target.value})} value={this.state.name}/>
+                        <input type="text" className="form-control" id="txtName" name='name' placeholder="Ingresa tu nombre(s)" onChange={this.handleInputChange} value={this.state.name}/>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-user-data">
                         <label className='lbl-col-user-data'>* Apellido(s)</label>
-                        <input type="text" className="form-control" id="txtLastName" placeholder="Ingresa tu(s) apellidos(s)" onChange={(e) => this.setState({lastName:e.target.value})} value={this.state.lastName}/>
+                        <input type="text" className="form-control" id="txtLastName" name='lastName' placeholder="Ingresa tu(s) apellidos(s)" onChange={this.handleInputChange} value={this.state.lastName}/>
                     </div>
                     <div className='col-sm-12 col-md-6 col-lg-6 col-xl-6 col-user-data'>
                         <label className='lbl-col-user-data'>* Sexo:</label>
-                        <select name="Sexo" className='form-control' id="cbxSexo" onChange={(e) => this.setState({sex:e.target.value})} value={this.state.sex}>
+                        <select className='form-control' id="cbxSexo" name="sex" onChange={this.handleInputChange} value={this.state.sex}>
                             <option value="0" selected>Seleccione una opción</option>
                             <option value="Hombre">Hombre</option>
                             <option value="Mujer">Mujer</option>
@@ -161,19 +220,25 @@ class Register extends Component {
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-user-data">
                         <label className='lbl-col-user-data'>* Número de teléfono</label>
-                        <input type="text" className="form-control" id="txtPhone" placeholder="Ingresa tu número de teléfono" onChange={(e) => this.setState({phone:e.target.value})} value={this.state.phone}/>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="txtPhone"
+                            name='phone'
+                            pattern="[0-9]{0,10}"
+                            placeholder="Ingresa tu número de teléfono" onChange={this.changePhone} value={this.state.phone}/>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-user-data">
                         <label className='lbl-col-user-data'>* Correo electrónico</label>
-                        <input type="text" className="form-control" id="txtEmail" placeholder="Ingresa tu correo electrónico" onChange={(e) => this.setState({email:e.target.value})} value={this.state.email}/>
+                        <input type="text" className="form-control" id="txtEmail" name='email' placeholder="Ingresa tu correo electrónico" onChange={this.handleInputChange} value={this.state.email}/>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-user-data">
                         <label className='lbl-col-user-data'>* Contraseña</label>
-                        <input type="password" className="form-control" id="cbxPassword" placeholder="Ingresa tu contraseña" onChange={(e) => this.setState({password:e.target.value})} value={this.state.password}/>
+                        <input type="password" className="form-control" id="cbxPassword" name='password' placeholder="Ingresa tu contraseña" onChange={this.handleInputChange} value={this.state.password}/>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-user-data">
                         <label className='lbl-col-user-data'>* Confirmar contraseña</label>
-                        <input type="password" className="form-control" id="cbxConfirmPassword" placeholder="Confirmar contraseña" onChange={(e) => this.setState({confirmpassword:e.target.value})} value={this.state.confirmpassword}/>
+                        <input type="password" className="form-control" id="cbxConfirmPassword" name='confirmpassword' placeholder="Confirmar contraseña" onChange={this.handleInputChange} value={this.state.confirmpassword}/>
                     </div>
                     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-user-data">
                         <button type="submit" className="btn btn-primary btn-submit-register" onClick={this.HandleCrear}>Registrar</button>
