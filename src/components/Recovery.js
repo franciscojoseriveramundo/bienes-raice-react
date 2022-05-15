@@ -9,7 +9,7 @@ const Recovery = () =>{
         <section className="login-section container-fluid">
             <div className="row img-login">
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 article-login">
-                    <img src={Image}/>
+                    <img src={Image} alt=""/>
                 </div>
             </div>
             <div className="row userCredentials">

@@ -7,7 +7,6 @@ body{
     background-color: transparent;
     font-family: $font-monserrat;
     font-size: 16px;
-    margin: 0;
     overflow-x: hidden;
 }
 
@@ -17,6 +16,14 @@ html, body {
     height:100%;
 }
 
+header{
+    position: relative;
+    z-index: 10000001;
+}
+
+nav{
+    position: absolute;
+}
 
 .navbar{
     font-family: $font-monserrat;
@@ -152,9 +159,11 @@ html, body {
 
     background-color: $coffee-without-opacity;
     color: $white-smoke;
-    position: absolute;
+    //position: absolute;
     left: 0;
     right: 0;
+    bottom:0;
+    position: relative !important;
 
     & > footer {
 
@@ -267,6 +276,7 @@ html, body {
         }
 
         & > .footer-copyright{
+            margin-top: 87px;
             & > .col-copyright{
                 & > .copyright-section{
                     & > .p-copyright{
@@ -282,15 +292,36 @@ html, body {
     }
 }
 
-/*CSS General (Max: 861px - Min: 576px)*/
-@media (max-width: 861px) and (min-width: 576px){
+@media (max-width: 862px) and (min-width: 577px){
     .footer-page{
         background-color: $coffee-without-opacity;
         color: $white-smoke;
-        position: absolute;
+        //position: absolute;
         left: 0;
         right: 0;
+        bottom:0;
+        position: absolute !important;
+    }
+}
+
+@media (max-width: 576px){
+    .footer-page{
+        background-color: $coffee-without-opacity;
+        color: $white-smoke;
+        //position: absolute;
+        left: 0;
+        right: 0;
+        position: relative !important;
         transition: right 0.5s;
+    }
+}
+
+/*CSS General (Max: 861px - Min: 576px)*/
+@media (max-width: 862px) and (min-width: 576px){
+    .footer-page{
+        background-color: $coffee-without-opacity;
+        color: $white-smoke;
+        //position: absolute;
 
         & > footer {
 
@@ -407,6 +438,7 @@ html, body {
             }
 
             & > .footer-copyright{
+                margin-top: 87px;
                 & > .col-copyright{
                     & > .copyright-section{
                         & > .p-copyright{
@@ -504,10 +536,12 @@ html, body {
     .footer-page{
         background-color: $coffee-without-opacity;
         color: $white-smoke;
-        position: absolute;
+        //position: absolute;
         left: 0;
         right: 0;
+        bottom: 0;
         transition: right 0.5s;
+        position: relative;
 
         & > footer {
 
@@ -620,6 +654,7 @@ html, body {
             }
 
             & > .footer-copyright{
+                margin-top: 87px;
                 & > .col-copyright{
                     & > .copyright-section{
                         & > .p-copyright{
