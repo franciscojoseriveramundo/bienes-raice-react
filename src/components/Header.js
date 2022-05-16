@@ -8,7 +8,7 @@ const Header = () =>{
 
     const btnCerrarSesion = () =>{
         sessionStorage.clear();
-        window.location.href = './login';
+        window.location.href = './';
     }
 
     const isLogged = sessionStorage.getItem("emailSession");
