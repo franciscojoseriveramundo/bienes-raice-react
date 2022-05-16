@@ -2,8 +2,10 @@ import '../css/index.css';
 import department1 from '../images/departamento-1.jpg';
 import department2 from '../images/departamento-2.jpg';
 import department3 from '../images/departamento-4.jpg';
+import React, {useEffect} from 'react';
 
 const Home = () =>{
+
     return(
         <>
         <div id="wrapper">

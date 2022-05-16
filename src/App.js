@@ -13,6 +13,9 @@ import Register from './components/Register';
 import Recovery from './components/Recovery';
 
 function App() {
+
+  //alert(sessionStorage.getItem("emailSession"));
+
   return (
     <div className="App">
       <BrowserRouter>
