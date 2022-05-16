@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../css/recovery.css';
 import Image from '../images/login.png';
+import React, {useEffect} from 'react';
 
 const Recovery = () =>{
 

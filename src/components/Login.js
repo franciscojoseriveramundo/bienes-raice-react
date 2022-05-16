@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import React, {Component} from 'react';
 import axios from 'axios';
 import CryptoAES from 'crypto-js/aes';
+import Home from './Home';
 
 class Login extends Component{
 
@@ -13,11 +14,18 @@ class Login extends Component{
             mensaje : 'Introduce tus credenciales de acceso.',
             alert: 'alert alert-info',
             email: '',
-            password: ''
+            password: '',
+            isLogged: sessionStorage.getItem("emailSession")
         }
     }
 
-    handleLogin = () =>{
+    componentDidMount() {
+        if(this.state.isLogged !== null){
+            window.location.href="./";
+        }
+    }
+
+    handleLogin = (e) =>{
 
         var isContinue = true;
 
@@ -29,6 +37,8 @@ class Login extends Component{
                 alert: 'alert alert-danger'
             });
             console.log(this.state.mensaje);
+
+            e.preventDefault();
         }
 
         if(isContinue === true){
@@ -43,56 +53,38 @@ class Login extends Component{
                 }).then(res => {
                         const persons = res.data.response;
                         const result = Object.values(JSON.parse(JSON.stringify(persons)));
-                        console.log(result[0]);
-                        console.log(result[1]);
-                        //alert(result);
+
                         this.setState({
                             mensaje: result[1]
                         });
 
                         if(result[0] === 1){
+
+                            this.createSession("emailSession", document.getElementById("txtEmailUser").value);
+
                             this.setState({
                                 alert: 'alert alert-success',
                                 email: '',
-                                password: ''
+                                password: '',
+                                isLogged : sessionStorage.getItem("emailSession")
                             });
 
+                            window.location.href="./";
                             resolve(result[1]);
                         }
                         else{
                             this.setState({
                                 alert: 'alert alert-danger'
                             });
+
+                            e.preventDefault();
 
                             reject(result[1]);
                         }
 
                     }).catch(err =>{
 
-                        const persons = err.data.response;
-                        const result = Object.values(JSON.parse(JSON.stringify(persons)));
-
-                        this.setState({
-                            mensaje: result[1]
-                        });
-
-                        if(result[0] === 1){
-                            this.setState({
-                                alert: 'alert alert-success',
-                                email: '',
-                                password: ''
-                            });
-
-                            resolve(result[1]);
-                        }
-                        else{
-                            this.setState({
-                                alert: 'alert alert-danger'
-                            });
-
-                            reject(result[1]);
-                        }
-
+                        e.preventDefault();
 
                         reject(err);
                     })
@@ -101,7 +93,12 @@ class Login extends Component{
 
     }
 
+    createSession = (name, value) =>{
+        sessionStorage.setItem(name, value);
+    }
+
     render(){
+
         return(
             <>
             <section className="login-section container-fluid">
@@ -124,15 +121,12 @@ class Login extends Component{
                         <input type="text" className="form-control" id="txtEmailUser" pattern="[0-255]*" placeholder="Ingresa tu correo electrónico" onChange={(e) => this.setState({email:e.target.value})} value={this.state.email}/>
                     </div>
 
-
                     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-user-credentials">
                         <input type="password" className="form-control" id="txtPassUser" pattern="[0-50]*" placeholder="Ingresa tu contraseña" onChange={(e) => this.setState({password:e.target.value})} value={this.state.password}/>
                     </div>
-
                     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-user-credentials">
-                        <button type="submit" className="btn btn-primary btn-submit-lgn" onClick={this.handleLogin}>Iniciar sesión</button>
+                        <button className="btn btn-primary btn-submit-lgn" onClick={this.handleLogin}>Iniciar sesión</button>
                     </div>
-
                     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-user-recovery">
                         <div className="form-group text-center m-t-10 mb-0 row">
                             <div className="col-sm-12 m-t-20">
@@ -140,7 +134,6 @@ class Login extends Component{
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
             </>

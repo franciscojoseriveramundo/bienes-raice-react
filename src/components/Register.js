@@ -18,7 +18,14 @@ class Register extends Component {
             phone: '',
             email: '',
             password: '',
-            confirmpassword: ''
+            confirmpassword: '',
+            isLogged: sessionStorage.getItem("emailSession")
+        }
+    }
+
+    componentDidMount() {
+        if(this.state.isLogged !== null){
+            window.location.href="./";
         }
     }
 
