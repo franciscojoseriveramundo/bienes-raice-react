@@ -19,7 +19,8 @@ class Register extends Component {
             email: '',
             password: '',
             confirmpassword: '',
-            isLogged: sessionStorage.getItem("emailSession")
+            isLogged: sessionStorage.getItem("emailSession"),
+            html: ''
         }
     }
 
@@ -108,9 +109,7 @@ class Register extends Component {
             var _ciphertext = CryptoAES.decrypt(ciphertext.toString(), 'secret key 123');
             console.log(_ciphertext.toString(CryptoENC));
             */
-
-
-            axios.post(`https://bienes-raices-350122.uc.r.appspot.com/v1/users/create`, {
+            axios.post(process.env.REACT_APP_url + `/v1/users/create`, {
                 "Username": this.state.name,
                 "UserLastName": this.state.lastName,
                 "UsersSex": this.state.sex,
@@ -129,26 +128,57 @@ class Register extends Component {
                         });
 
                         if(v.Code === "1"){
-                            this.setState({
-                                alert: 'alert alert-success',
-                                name : '',
-                                lastName: '',
-                                sex: '0',
-                                phone: '',
-                                email: '',
-                                password: '',
-                                confirmpassword: ''
+
+                            var html = "";
+
+                            axios.get(process.env.REACT_APP_url+ `/v1/email/1`, true).then(res2 => {
+                                const persons = res2.data.response;
+                                const result2 = Object.values(JSON.parse(JSON.stringify(persons)));
+                                //alert(result);
+                                result2.forEach((v) =>{
+                                    html = v.EmailLayoutBody;
+                                });
+
+                                html = html.toString();
+
+                                html = html.replace("@Correo", document.getElementById("txtEmail").value);
+                                html = html.replace("@Contraseña", document.getElementById("cbxPassword").value)
+                                html = html.replace("@Anio", new Date().getFullYear().toString());
+                                html = html.replace("\n", "");
+
+                                if(html !== ""){
+                                    axios.post(process.env.REACT_APP_url + `/v1/email`, {
+                                        "EmailTo" : this.state.email,
+                                        "EmailHTML" : html,
+                                        "EmailSubject" : "Creación de una nueva cuenta de acceso a MyHome"
+                                    }).then(res3 => {
+
+                                        this.setState({
+                                            alert: 'alert alert-success',
+                                            name : '',
+                                            lastName: '',
+                                            sex: '0',
+                                            phone: '',
+                                            email: '',
+                                            password: '',
+                                            confirmpassword: '',
+                                            html: ''
+                                        });
+
+                                        resolve(result);
+                                    });
+                                }
                             });
                         }
                         else{
                             this.setState({
                                 alert: 'alert alert-danger'
                             });
+                            resolve(result);
                         }
 
                     });
                     //alert(response);
-                    resolve(result);
                 }).catch(err =>{
                     this.setState({
                         mensaje: err,
