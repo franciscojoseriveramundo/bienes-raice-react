@@ -70,9 +70,6 @@ class Recovery extends Component{
                                         "EmailHTML" : html,
                                         "EmailSubject" : "Recuperación de cuenta de acceso a MyHome"
                                     }).then(res3 => {
-                                        this.setState({
-                                            email: ''
-                                        });
                                         resolve(result);
                                     });
                                 }
@@ -89,7 +86,8 @@ class Recovery extends Component{
 
             this.setState({
                 alert : "alert alert-success",
-                message : "Se han enviado sus credenciales de acceso a su bandeja de entrada."
+                message : "Se han enviado sus credenciales de acceso a su bandeja de entrada.",
+                email: ''
             });
         }
     }
