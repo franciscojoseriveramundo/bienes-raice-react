@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import React, {Component} from 'react';
 import axios from 'axios';
 import CryptoAES from 'crypto-js/aes';
-import Home from './Home';
 
 class Login extends Component{
 
@@ -27,6 +26,8 @@ class Login extends Component{
 
     handleLogin = (e) =>{
 
+        //alert(process.env.REACT_APP_url);
+
         var isContinue = true;
 
         if(!this.state.email || !this.state.password){
@@ -47,7 +48,7 @@ class Login extends Component{
 
             new Promise((resolve, reject) =>
             {
-                axios.post(`https://bienes-raices-350122.uc.r.appspot.com/v1/users`, {
+                axios.post(process.env.REACT_APP_url + `/v1/users`, {
                     "Useremail" :       this.state.email,
                     "Userpassword" :    passwordEnc
                 }).then(res => {
